@@ -1,0 +1,81 @@
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <title>Cognitive Weather</title>
+    <link href="static/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="static/rzslider.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/style.css" rel="stylesheet" type="text/css">
+</head>    
+
+<body ng-controller="ObsController">
+    <div class="main-wrapper">		
+            <div id='header'>
+                <div class="nav">
+                    <div class="title">
+                        <span>认知致灾天气识别与预报</span>
+                    </div>
+                    <div class="column">
+                        <ul>
+                        <li><a href="#"><div class="menuIcon menuIcon1"></div><div id='identify_text'>强对流天气聚焦</div></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    <div class="container" ng-controller="MapController">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="datepicker" ng-controller="DatepickerCtrl">
+                    <p class="input-group">
+                        <input type="text" class="form-control well well-sm" ng-change="changeDate(dt, true)"  uib-datepicker-popup="yyyy-MM-dd" ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="关闭" clear-text="清除" />
+                        <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div>
+                    <p class="input-group">
+                        <input type="time" class="form-control well well-sm" placeholder="HH:mm" min="00:00:00" max="24:00:00" required ng-model="hour">
+                    </p>
+                </div>
+                <!--div uib-timepicker arrowkeys="false" ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></div-->
+            </div>
+            <div class="col-md-2">
+                <select class="form-control" ng-model="selectType" ng-options="item[0]+' '+item[1] for item in selectTypes" ng-change=changeObsType()></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div id="map" class="map"></div>
+                <div>
+                    <div id="popup" class="ol-popup">
+                        <a href="#" id="popup-closer" class="ol-popup-closer" ng-click="closePopup()"></a>
+                        <div id="popup-content"></div>
+                    </div>
+                </div>
+                <rzslider rz-slider-model="slider.value" rz-slider-options="slider.options"></rzslider>
+            </div>
+            <div class="col-md-4">
+                <div id='stat'>
+                    <h4>区域短临天气预报(0~3小时)</h4>
+                    <line-chart chart-data="myData" values="forecastValues"  name="forecastValues"></line-chart>
+                </div>
+                <div id='stat'>
+                    <h4>致灾天气分类</h4>
+                    <bar-chart chart-data="myData" values="classValues"  name="typeValues"></bar-chart>
+                </div>
+                <div id='stat'>
+                    <h4>预警信息</h4>
+                    
+                </div>
+                
+                
+            </div>
+        </div>	
+    </div>
+    <script src="static/bundle.js" type="text/javascript"></script>
+
+</body>
+</html>

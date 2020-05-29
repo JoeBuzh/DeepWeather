@@ -1,0 +1,54 @@
+{
+  "name": "cog-weather",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "watchify main.js --outfile bundle.js",
+    "build": "browserify main.js | uglifyjs --compress --output bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-cookies": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angularjs-datepicker": "^2.1.23",
+    "angularjs-slider": "^6.4.0",
+    "d3": "^4.10.0",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "openlayers": "4.2.0",
+    "ui-select": "^0.19.8"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "plugins": [
+            "transform-es2015-modules-commonjs"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-runtime": "^6.9.2",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.13.0"
+  }
+}

@@ -1,0 +1,168 @@
+.map {
+    width: 100%;
+    height: 580px;
+}
+.bar { fill: steelblue; }
+
+
+.header{
+  background-image: url(../static/images/bannerA.png);
+  height: 20%;
+  margin: 0;
+  width: 100%;
+}
+.container{
+ margin: 0;
+ width: 100%; 
+}
+.left-container{
+  border-right: 4px solid rgba(41, 40, 40, 0.42);
+  background-color: #6E6E6E;
+}
+.right-container{
+  padding: 0;
+  margin: 0;
+}
+.title{
+  font: 24px sans-serif;
+  color: white;
+  margin: 10px 0 10px 20px;
+}
+.mapheader{
+  background-color: #333333; 
+  padding:0px 0 0 0;
+}
+.mapheader p{
+  margin: 2px 0 2px 0;
+}
+.stat{
+  background-color: #6E6E6E;
+  min-height: 165px;
+}
+.stat h4{
+  background-color: #333333; 
+  padding:4px 0 4px 15px; 
+  color: white; 
+  margin: 0;
+  font: 15px sans-serif;
+  border-bottom: 4px solid rgba(18, 37, 58, 0.82);
+  border-top: 4px solid rgba(234, 235, 236, 0.82);
+}
+.footer{
+  height: 40px;
+  background-color: #0E0E27;
+}
+
+
+ /* rzslider */
+ .rzslider {
+	height: 25px;
+	margin: 5px 0 5px 0;
+	padding: 0 0px 0 0;
+    position: absolute;
+    /*bottom: -10px;*/
+    
+}
+.rzslider .rz-pointer {
+    top: 0px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #0db9f0;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+}
+.rzslider .rz-pointer:after {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    background: #474747;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    content: '';
+}
+
+.rzslider .rz-bar-wrapper {
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 32px;
+    padding-top: 30px;
+    margin-top: -20px;
+    box-sizing: border-box;
+}
+.rzslider .rz-ticks {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    margin: 10px 0 0 0;
+}
+.rzslider .rz-ticks-values-under .rz-tick-value {
+    top: auto;
+    bottom: -18px;
+}
+
+.rzslider span {
+    position: absolute;
+    display: inline-block;
+    white-space: nowrap;
+    color: white;
+  	font: 12px sans-serif;
+}
+
+/*
+ ol popup
+*/
+.ol-popup {
+    position: absolute;
+    background-color: #66CC33;
+    opacity: 0.85;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    bottom: 5px;
+    left: -50px;
+    min-width: 280px;
+    color: white;
+    font: 14px sans-serif;
+  }
+  .ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+  }
+  .ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+  }
+  .ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+  }
+  .ol-popup-closer:after {
+    content: "✖";
+  }
