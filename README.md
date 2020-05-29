@@ -21,8 +21,23 @@ A Interesting Rain Forecast Model for Nowcasting.
 
 ### Structure
 
-#### model
-+ Save the train models and prepare for forecast
+#### ./src
+
++ ./src/sparnn: forked from Dr.Shi
++ ./src/runtime: main codes contain training and prdicting 
++ ./src/tools: scripts
++ ./src/model: save training models
+
+#### ./model
++ Models prepare for forecast
+
+#### ./basemap
++ Base map with lines
++ Post preocess for adding geo-informations
+
+#### ./presentation
++ pictures about test results
++ App implemention
 
 ### Futuer Work
 + Moving to higher framework liek Pytorch or Keras.
